@@ -20,7 +20,7 @@ public class TextGenerator {
       Connection connection = DriverManager.getConnection(databaseURL, username, password);
 
       if (connection != null) {
-        String SQL = "select name, nickname, species from users";
+        String SQL = "SELECT * FROM users";
         Statement stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery(SQL);
           while (rs.next()) {
@@ -31,7 +31,7 @@ public class TextGenerator {
           connection.close();
         }
       } catch (Exception e) {
-        return "Database connection problem!";
+        return ("Database connection problem! \n\n" + e.getMessage());
       }
     return userDetails;
   }
