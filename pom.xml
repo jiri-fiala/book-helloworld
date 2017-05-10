@@ -22,9 +22,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-          <groupId>org.mysql</groupId>
-          <artifactId>mysql-connector-java</artifactId>
-          <version>5.1.17</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.17</version>
         </dependency>
     </dependencies>
 

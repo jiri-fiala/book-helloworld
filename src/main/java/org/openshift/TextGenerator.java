@@ -17,6 +17,7 @@ public class TextGenerator {
       String username = System.getenv("MYSQL_USER");
       String password = System.getenv("MYSQL_PASSWORD");
 
+      Class.forName("com.mysql.jdbc.Driver");
       Connection connection = DriverManager.getConnection(databaseURL, username, password);
 
       if (connection != null) {
