@@ -25,7 +25,7 @@ public class TextGenerator {
         Statement stmt = connection.createStatement();
         ResultSet rs = stmt.executeQuery(SQL);
           while (rs.next()) {
-            userDetails = String.format("Name: %s, Nickname: %s, Species: %s",
+            userDetails += String.format("Name: %s, Nickname: %s, Species: %s\n",
             rs.getString("name"), rs.getString("nickname"), rs.getString("species"));
           }
           rs.close();
